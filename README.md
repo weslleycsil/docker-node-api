@@ -13,6 +13,20 @@ docker push weslleycsil/docker-node-api
 command -> docker swarm init
 command deploy stack service - > docker stack deploy -c app-principal.yml app-principal
 
+#Instalando Docker
+
+```
+Para fazer a execução do script acima basta executar:
+
+wget -O - https://raw.githubusercontent.com/weslleycsil/440815560b17237ca1f7240ded81ae76/raw/install_docker.sh | bash
+
+Caso queira executar o docker sem utilizar o comando sudo, adicione seu usuário ao grupo docker:
+
+sudo usermod -aG docker nome-usuario
+
+```
+
+
 #Inscrição
 curl --request POST \
   --url http://108.61.81.83:9001/participantes/ \
