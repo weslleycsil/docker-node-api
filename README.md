@@ -28,7 +28,8 @@ sudo usermod -aG docker nome-usuario
 
 
 #Inscrição
-```curl --request POST \
+```
+curl --request POST \
   --url http://108.61.81.83:9001/participantes/ \
   --header 'Cache-Control: no-cache' \
   --header 'Content-Type: application/json' \
