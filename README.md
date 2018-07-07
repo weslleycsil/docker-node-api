@@ -28,12 +28,12 @@ sudo usermod -aG docker nome-usuario
 
 
 #Inscrição
-curl --request POST \
+```curl --request POST \
   --url http://108.61.81.83:9001/participantes/ \
   --header 'Cache-Control: no-cache' \
   --header 'Content-Type: application/json' \
   --data '{"codigo":"12345","nome":"Weslley","email":"weslleycsil@gmail.com"}'
-
+```
 #primeiro programa com nodejs
 
 ```
@@ -47,3 +47,6 @@ res.end("Olá mundo! Experimentando Node.js</h1>");
 console.log('Servidor rodando em http://' + host + ':' + port);
 });
 ```
+
+
+docker run hello-world
