@@ -1,0 +1,54 @@
+version: "3"
+services:
+
+    portainer:
+        image: portainer/portainer
+        command: -H unix:///var/run/docker.sock
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainer_data:/data
+        ports:
+            - "9000:9000"
+        networks:
+            - net
+        deploy:
+            placement:
+                constraints: [node.role == manager]
+
+    database:
+        image: mongo
+        networks:
+            - backend
+        environment:
+            - MONGO_INITDB_DATABASE=corujao
+        ports:
+            - "27017:27017"
+        volumes:
+            - db-data:/data/db
+        command: --smallfiles --noprealloc
+        restart: always
+
+    web:
+        image: weslleycsil/docker-node-api
+        #volumes:
+        #    - app-data:/usr/src/app
+        networks:
+            - net
+            - backend
+        ports:
+            - 9001:9000
+        depends_on:
+            - database       
+        #environment:
+        deploy:
+            replicas: 1
+        command: npm start
+        working_dir: /usr/src/app
+
+volumes:
+#    app-data:
+    db-data:
+    portainer_data:
+networks:
+    net:
+    backend:
