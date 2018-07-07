@@ -12,3 +12,10 @@ docker push weslleycsil/docker-node-api
 
 command -> docker swarm init
 command deploy stack service - > docker stack deploy -c app-principal.yml app-principal
+
+#Inscrição
+curl --request POST \
+  --url http://108.61.81.83:9001/participantes/ \
+  --header 'Cache-Control: no-cache' \
+  --header 'Content-Type: application/json' \
+  --data '{"codigo":"12345","nome":"Weslley","email":"weslleycsil@gmail.com"}'
