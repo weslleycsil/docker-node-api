@@ -2,7 +2,7 @@
 Curso de como "Dockerizar" Uma API feita com Nodejs e MongoDB
 
 Slides -> https://goo.gl/bypuYC
-Questionário sobre o Curso -> 
+Questionário sobre o Curso -> https://goo.gl/NdDsXy
 Sorteio -> http://108.61.81.83:9001/participantes
 
 docker build -t weslleycsil/docker-node-api .

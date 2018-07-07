@@ -17,7 +17,7 @@ exports.list = (req, res) => {
 exports.sortear = (req, res) => {
     Participantes.find()
     .then(participantes => {
-        res.json(participantes);
+        res.json(participantes[((Math.random() * participantes.length) | 0)]);
     })
     .catch(err => {
         console.error(err);

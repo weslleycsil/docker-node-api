@@ -4,6 +4,6 @@ module.exports =  {
         port: process.env.PORT || 9000 //caso não seja passado uma porta, executo na 9000
     },
     database: {
-        uri: `mongodb://database:27017/oceanar`
+        uri: `mongodb://database:27017/corujao`
     }
 };
