@@ -18,7 +18,9 @@ command deploy stack service - > docker stack deploy -c app-principal.yml app-pr
 ```
 Para fazer a execução do script acima basta executar:
 
-wget -O - https://raw.githubusercontent.com/weslleycsil/440815560b17237ca1f7240ded81ae76/raw/install_docker.sh | bash
+```
+wget -O - https://raw.githubusercontent.com/weslleycsil/440815560b17237ca1f7240ded81ae76/raw/install_docker.sh | bash 
+```
 
 Caso queira executar o docker sem utilizar o comando sudo, adicione seu usuário ao grupo docker:
 
